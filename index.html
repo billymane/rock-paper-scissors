@@ -61,12 +61,13 @@
                 console.log("Player: " + playerScore + " Computer: " + computerScore)
             }
         }
+
         if (playerScore > computerScore) {
-            return "You Win! " + playerScore + ":" + computerScore;
+            console.log( "You Win! " + playerScore + ":" + computerScore);
         } else if (computerScore > playerScore) {
-            return "You Lose! " + playerScore + ":" + computerScore;
+            console.log( "You Lose! " + playerScore + ":" + computerScore);
         } else {
-            return "It's a tie! " + playerScore + ":" + computerScore;
+            console.log( "It's a tie! " + playerScore + ":" + computerScore);
         }
     }
 
