@@ -1,0 +1,8 @@
+.score {
+    display: inline;
+    border: 1px solid black;
+}
+
+.buttons {
+    margin-bottom: 10px;
+}

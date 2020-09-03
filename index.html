@@ -1,75 +1,24 @@
-<script>
-    function computerPlay() {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="buttons">
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissors">Scissors</button>
+</div>
 
-        let game = ["rock", "paper", "scissors"];
 
-        let random = Math.floor((Math.random() * game.length));
-        let randomName = game[random];
+    <div>
+        <div class="score">Player Score: <span class="playerScore">0</span></div>
+        <div class="score">Computer Score: <span class="computerScore">0</span></div>
+    </div>
 
-        return randomName;
-    }
-
-    function playRound(playerSelection, computerSelection) {
-
-        if (playerSelection.toLowerCase() === "rock") {
-            if (computerSelection === "paper") {
-                return "lose"
-            } else if (computerSelection === "scissors") {
-                return "win"
-            } else {
-                return "tie"
-            }
-        } else if (playerSelection.toLowerCase() === "paper") {
-            if (computerSelection === "rock") {
-                return "win"
-            } else if (computerSelection === "scissors") {
-                return "lose"
-            } else {
-                return "tie"
-            }
-        } else {
-            if (computerSelection.toLowerCase() === "rock") {
-                return "lose"
-            } else if (computerSelection === "paper") {
-                return "win"
-            } else {
-                return "tie"
-            }
-        }
-    }
-
-    function game() {
-
-        let playerScore = 0;
-        let computerScore = 0;
-
-        for (let i = 0; i < 5; i++) {
-            let playerSelection = prompt("Rock, Paper or Scissors?");
-
-            let result = playRound(playerSelection, computerPlay());
-
-            if (result === "win") {
-                playerScore++;
-                console.log("You win!")
-                console.log("Player: " + playerScore + " Computer: " + computerScore)
-            } else if (result === "lose") {
-                computerScore++;
-                console.log("You lose!")
-                console.log("Player: " + playerScore + " Computer: " + computerScore)
-            } else {
-                console.log("TIE");
-                console.log("Player: " + playerScore + " Computer: " + computerScore)
-            }
-        }
-
-        if (playerScore > computerScore) {
-            console.log( "You Win! " + playerScore + ":" + computerScore);
-        } else if (computerScore > playerScore) {
-            console.log( "You Lose! " + playerScore + ":" + computerScore);
-        } else {
-            console.log( "It's a tie! " + playerScore + ":" + computerScore);
-        }
-    }
-
-    game()
-</script>
+<script src="script.js"></script>
+</body>
+</html>
